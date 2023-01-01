@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap");
+
+:root {
+    --DarkCyan: hsl(158, 36%, 37%);
+    --MoreDarkCyan: hsl(158, 36%, 27%);
+    --Cream: hsl(30, 38%, 92%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Mobile: 375px;
+    --Desktop: 1440px;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--Cream);
+}
+
+main {
+    max-width: 100%;
+}
+
+.btn-product-add-cart {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--DarkCyan);
+    color: var(--White);
+    padding: 1rem 3.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+.btn-product-add-cart:hover {
+    background-color: var(--MoreDarkCyan);
+}
+
+.icon-cart {
+    margin-right: 5px;
+}
+
+.product-discount {
+    color: var(--DarkCyan);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+
+.product-origin {
+    text-decoration: line-through;
+    font-size: 0.75rem;
+    color: var(--DarkGrayishBlue);
+    margin-left: 2rem;
+}
+
+.product-prices {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.product-maintitle {
+    font-family: 'Fraunces', serif;
+    color: var(--VeryDarkBlue);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.product-description {
+    line-height: 1.5rem;
+    color: var(--DarkGrayishBlue);
+}
+
+.product-subtitle {
+    letter-spacing: 0.5rem;
+    color: var(--DarkGrayishBlue);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.product-detail {
+    padding: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-grow > * {
+    flex: 1;
+}
+
+.product {
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--White);
+    margin: 1rem;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-image > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 480px) {
+    .product {
+        flex-direction: row;
+        max-width: 640px;
+    }
+
+    .product-image {
+        flex: 0 0 50%;
+    }
+
+    .product-image > img {
+        height: 100%;
+    }
+
+    .product-detail {
+        flex: 0 1 50%;
+    }
+}
